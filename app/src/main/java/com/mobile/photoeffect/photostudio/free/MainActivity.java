@@ -2,13 +2,19 @@ package com.mobile.photoeffect.photostudio.free;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
-
+import android.Manifest;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -52,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     .galleryOnly()
                     .start();
         });
-
+        askPermission();
     }
 
     @Override
@@ -70,4 +76,31 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    private void askPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
+                PackageManager.PERMISSION_GRANTED) {
+            Log.d("CAMERA permission",
+                    "CAMERA permission granted");
+        } else {
+            final ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
+                    new ActivityResultContracts.RequestPermission(),
+                    new ActivityResultCallback<Boolean>() {
+                        @Override
+                        public void onActivityResult(Boolean isGranted) {
+                            if (isGranted) {
+                                Log.d("CAMERA permission",
+                                        "CAMERA permission granted");
+                            } else {
+                                Log.d("CAMERA permission",
+                                        "CAMERA permission");
+                            }
+                        }
+                    }
+            );
+            requestPermissionLauncher.launch(Manifest.permission.CAMERA);
+        }
+    }
+
+
 }
