@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="take_a_photo">Зробити фото</string>
+    <string name="camera_roll">Імпортувати фото</string>
+    <string name="back_to_menu">Головне меню</string>
+    <string name="image_was_saved">Зображення збережено ✅</string>
+    <string name="def_final_text">Поверніться до головного меню, щоб вибрати фотографію</string>
+    <string name="toast">Збережено в папці \"Photo Studio\"</string>
+</resources>

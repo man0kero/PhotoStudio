@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="take_a_photo">Take a photo</string>
+    <string name="camera_roll">Import photo</string>
+    <string name="back_to_menu">Main menu</string>
+    <string name="image_was_saved">Image saved ✅</string>
+    <string name="def_final_text">Return to the main menu to select a photo</string>
+    <string name="toast">Saved to the \"Photo Studio\" folder</string>
+</resources>
