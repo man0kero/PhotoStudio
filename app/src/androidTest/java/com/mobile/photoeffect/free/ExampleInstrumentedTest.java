@@ -1,4 +1,4 @@
-package com.mobile.photoeffect.photostudio.free;
+package com.mobile.photoeffect.free;
 
 import android.content.Context;
 

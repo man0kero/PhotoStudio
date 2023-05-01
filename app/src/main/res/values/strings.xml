@@ -1,13 +1,17 @@
 <resources>
-    <string name="app_name" translatable="false">Photo Editor</string>
+    <string name="app_name" translatable="false">PhotoEditor Design</string>
     <string name="take_a_photo">Take a photo</string>
     <string name="camera_roll">Import photo</string>
     <string name="back_to_menu">Main menu</string>
     <string name="image_was_saved">Image saved ✅</string>
     <string name="def_final_text">Return to the main menu to select a photo</string>
-    <string name="toast">Saved to the "Photo Studio" folder</string>
-    <string name="admob_app_id" translatable="false">ca-app-pub-9176260107574133~9430580883</string>
-    <string name="banner_id" translatable="false">ca-app-pub-9176260107574133/9646149407</string>
-    <string name="interstitial_id" translatable="false">ca-app-pub-9176260107574133/9239009199</string>
-    <string name="ad_open_id" translatable="false">ca-app-pub-9176260107574133/3986682515</string>
+    <string name="toast">Saved to the "PhotoEditor Design" folder</string>
+    <string name="snackbar_text">Go to settings to allow access to the camera.</string>
+    <string name="snackbar_storage_text">Go to settings to allow access to the storage.</string>
+    <string name="snackbar_action">Settings</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-9176260107574133~6763893240</string>
+    <string name="banner_id" translatable="false">ca-app-pub-9176260107574133/3389407408</string>
+    <string name="interstitial_id" translatable="false">ca-app-pub-9176260107574133/3040270654</string>
+    <string name="ad_open_id" translatable="false">ca-app-pub-9176260107574133/1535617294</string>
 </resources>

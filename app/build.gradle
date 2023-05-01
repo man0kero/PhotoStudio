@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.mobile.photoeffect.photostudio.free'
+    namespace 'com.mobile.photoeffect.free'
     compileSdk 33
 
     dataBinding {
@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.mobile.photoeffect.photostudio.free"
+        applicationId "com.mobile.photoeffect.free"
         minSdk 26
         targetSdk 33
         versionCode 1
@@ -41,6 +41,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
 
     // DS Photo Editor SDK
     implementation fileTree(dir: 'libs', include: ['*.jar'])

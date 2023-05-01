@@ -1,26 +1,24 @@
-package com.mobile.photoeffect.photostudio.free;
-
-import static com.mobile.photoeffect.photostudio.free.MainActivity.imgUri;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+package com.mobile.photoeffect.free;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.bumptech.glide.Glide;
 import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
 import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.google.android.gms.ads.AdRequest;
-import com.mobile.photoeffect.photostudio.free.databinding.ActivityFinalBinding;
+import com.mobile.photoeffect.free.databinding.ActivityFinalBinding;
 
 public class FinalActivity extends AppCompatActivity {
     private InterstitialAdImpl interstitialAd;
     private ActivityFinalBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +31,9 @@ public class FinalActivity extends AppCompatActivity {
         interstitialAd.loadInterstitialAd(this);
 
         Intent dsPhotoEditorIntent = new Intent(this, DsPhotoEditorActivity.class);
-        dsPhotoEditorIntent.setData(imgUri);
+        dsPhotoEditorIntent.setData(MainActivity.imgUri);
 
-        dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, R.string.app_name);
+        dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, getText(R.string.app_name));
 
         startActivityForResult(dsPhotoEditorIntent, 200);
 
@@ -56,7 +54,7 @@ public class FinalActivity extends AppCompatActivity {
                     binding.recAd.setVisibility(View.INVISIBLE);
                     Uri outputUri = data.getData();
                     binding.text.setText(getApplicationContext().getText(R.string.image_was_saved));
-                    Toast.makeText(this, R.string.toast, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getText(R.string.toast), Toast.LENGTH_LONG).show();
                     Glide.with(this)
                             .load(outputUri)
                             .override(binding.imageView.getWidth(), binding.imageView.getHeight())

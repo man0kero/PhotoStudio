@@ -5,5 +5,8 @@
     <string name="back_to_menu">Главное меню</string>
     <string name="image_was_saved">Изображение сохранено ✅</string>
     <string name="def_final_text">Вернитесь в главное меню для выбора фотографии</string>
-    <string name="toast">Сохранено в папке \"Photo Studio\"</string>
+    <string name="toast">Сохранено в папке \"PhotoEditor Design\"</string>
+    <string name="snackbar_text">Перейдите в настройки, чтобы разрешить доступ к камере.</string>
+    <string name="snackbar_storage_text">Перейдите в настройки, чтобы разрешить доступ к хранилищу.</string>
+    <string name="snackbar_action">Настройки</string>
 </resources>

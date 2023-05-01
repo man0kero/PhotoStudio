@@ -1,13 +1,13 @@
-package com.mobile.photoeffect.photostudio.free;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.mobile.photoeffect.free;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class LoadingAdActivity extends AppCompatActivity {
-    private static final long COUNTER_TIME = 3;
+    private static final long COUNTER_TIME = 2;
     private long secondsRemaining;
 
     @Override

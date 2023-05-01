@@ -6,4 +6,7 @@
     <string name="image_was_saved">Image saved ✅</string>
     <string name="def_final_text">Return to the main menu to select a photo</string>
     <string name="toast">Saved to the \"Photo Studio\" folder</string>
+    <string name="snackbar_text">Go to settings to allow access to the camera.</string>
+    <string name="snackbar_storage_text">Go to settings to allow access to the storage.</string>
+    <string name="snackbar_action">Settings</string>
 </resources>
